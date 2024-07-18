@@ -36,7 +36,7 @@ title 'SAS Workbench demonstration';
 title;
 
 /****** Import file ******/
-proc import datafile = "/workspaces/myfolder/PythonInno/bank.csv"
+proc import datafile = "/workspaces/myfolder/Workbench_Workshop/bank.csv"
             out = bank dbms = csv replace;
             guessingrows=30;
 run;
@@ -198,14 +198,6 @@ proc print data=bank_train (obs=10);
 run; */
 
 
-/* ***** Export bank_test to CSV *****
-proc export data=bank_test
-            outfile="/workspaces/myfolder/PythonInno/bank_test.csv"
-            dbms=csv
-            replace;
-run; */
-
-
 /******************************************************************************
 
 Step 4: Modelling
@@ -265,7 +257,7 @@ title2;
 /****** Saving model as ASTORE file ******/
 title2 'Saving the astore into a file';
 proc astore;
-    download rstore=foreststore store="/workspaces/myfolder/PythonInno/foreststore.sasast";
+    download rstore=foreststore store="/workspaces/myfolder/Workbench_Workshop/foreststore.sasast";
 run;
 title2;
 
@@ -273,7 +265,7 @@ title2;
 /****** Replicating model and Re-Scoring ******/
 title2 'Reloading the astore and scoring it';
 proc astore;
-    upload rstore=foreststore2 store="/workspaces/myfolder/PythonInno/foreststore.sasast";
+    upload rstore=foreststore2 store="/workspaces/myfolder/Workbench_Workshop/foreststore.sasast";
     describe rstore=foreststore2;
     score data=bank_test rstore=foreststore2 out=bank_scoreout2;
 run;
@@ -349,7 +341,7 @@ title2;
 /****** Saving model as ASTORE file ******/
 title2 'Saving the astore into a file';
 proc astore;
-    download rstore=gbstore store="/workspaces/myfolder/PythonInno/gbstore.sasast";
+    download rstore=gbstore store="/workspaces/myfolder/Workbench_Workshop/gbstore.sasast";
 run;
 title2;
 
@@ -373,7 +365,7 @@ proc registermodel
       oauthtoken = "myTokenName"
       replace;
     project name="InnoSyd2024";
-    astoremodel store = "/workspaces/myfolder/PythonInno/gbstore.sasast";
+    astoremodel store = "/workspaces/myfolder/Workbench_Workshop/gbstore.sasast";
     target Status / level=binary event="1";
     assessment;
 run;
@@ -391,7 +383,7 @@ proc registermodel
       oauthtoken = "myTokenName"
       replace;
     project name="InnoSyd2024";
-    astoremodel store = "/workspaces/myfolder/PythonInno/foreststore.sasast";
+    astoremodel store = "/workspaces/myfolder/Workbench_Workshop/foreststore.sasast";
     target Status / level=binary event="1";
     assessment;
 run;
