@@ -1,13 +1,18 @@
-# InnovateDemo
-This project leverages both Scikit-learn and SAS Viya to predict customer churn, helping businesses understand and retain their valuable customers.
+# PythonInno
+Innovate Sydney Workbench workshop using banking data set in aims to show python use on SAS products.
 
-# Features
-* Synthetic Data Generation: Utilized the SAS Synthetic Data Generator API to create robust, synthetic datasets.
-* Exploratory Data Analysis (EDA): Conducted comprehensive EDA using Matplotlib and Seaborn to gain insights into the data.
-* Dual Model Creation: Built Random Forest models using both Scikit-learn and SAS Viya.
-* Hyperparameter Tuning: Optimized the Scikit-learn model with the Hyperopt library for enhanced performance.
-* Model Deployment: Deployed both Scikit-learn pipelines and SAS Viya models into the SAS Model Manager (using the SAS-CTL package) to serve predictions in production.
+This workshop should be able to
+- 
+1. Showcase use of python libraries
+2. Connect SAS algorithms/functions
+3. Follow the dataset narrative
 
-# Source
-Adapted from existing repo.
-# InnoDemo
+Details of the workshop
+- 
+20 minutes
+
+
+Room separated by SAS-coded and Python-coded excercises
+
+
+The narrative is that each team explores a "what if" scenario
