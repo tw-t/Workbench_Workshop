@@ -19,8 +19,8 @@ instruments.
 
 ### Instructions
 
-Follow along as we run a SAS script on Workbench to prepare, explore, model and
-deploy our data.
+Follow along as we run a SAS script on Workbench to prepare, explore, model our
+data and deploy the models.
 
  ******************************************************************************/
 
