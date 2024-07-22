@@ -99,6 +99,9 @@ footnote;
 
 
 /* Graph for Customer Value Groups by Activity Status */
+footnote italic "We find that the cutsomer value groups help represent how these 
+cutsomers contribute to the firm's sales. Those in the lowest value group are 
+observed to have the highest activity status.";
 proc sgplot data=bank;
     vbar Customer_Value /  
         group=Activity_Status 
@@ -108,6 +111,7 @@ proc sgplot data=bank;
     yaxis label='Count';
     title 'Customer Value Groups by Activity Status';
 run;
+footnote;
 
 /* Graph for Proportionate AvgSaleLife per Customer by Activity Status */
 proc means data=bank noprint;
