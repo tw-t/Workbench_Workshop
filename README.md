@@ -13,3 +13,7 @@ Details of the workshop
 
 - 20 minutes
 - Room separated by SAS-coded and Python-coded excercises.
+
+[28/11/2024 EDIT]
+- Added .sasnb version of project
+- Extended model evaluation content
